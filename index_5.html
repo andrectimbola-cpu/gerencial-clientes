@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)file:///C:/Users/Free/Downloads/index_4.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GerencialPR</title>
+<style>
+:root{--v:#6B1A2A;--ve:#4A0F1C;--vc:#8B2A3E;--g:#C9A84C;--gc:#F0D080;--cr:#F8F4EF;--w:#FFF;--b:#E0D5CE;--t:#3A2E2E;--tl:#7A6A66;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:Arial,sans-serif;background:var(--cr);color:var(--t);}
+.hdr{background:var(--ve);color:#fff;padding:0 24px;height:58px;display:flex;align-items:center;gap:12px;box-shadow:0 2px 8px rgba(0,0,0,.2);position:sticky;top:0;z-index:100;}
+.logo{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.15);border:2px solid var(--g);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:var(--g);}
+.ht{font-size:16px;font-weight:700;}.hs{font-size:11px;opacity:.6;}
+.sc{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:12px;}
+.dot{width:8px;height:8px;border-radius:50%;background:#ccc;}
+.dot.ok{background:#4CAF50;}.dot.off{background:#f44336;}
+.tabs{display:flex;background:var(--ve);padding:0 24px;border-bottom:2px solid var(--vc);}
+.tab{padding:10px 20px;font-size:13px;font-weight:600;color:rgba(255,255,255,.5);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;white-space:nowrap;}
+.tab.on{color:var(--gc);border-bottom-color:var(--g);}
+.pnl{display:none;max-width:1100px;margin:0 auto;padding:20px;}.pnl.on{display:block;}
+.card{background:var(--w);border-radius:10px;padding:20px;margin-bottom:16px;box-shadow:0 1px 8px rgba(0,0,0,.08);}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;}
+.fg{display:flex;flex-direction:column;gap:4px;}
+.fg label{font-size:11px;font-weight:700;color:var(--v);text-transform:uppercase;}
+.fw{flex:1;min-width:200px;}.fw input{width:100%;}
+select,input[type=text]{border:2px solid var(--b);border-radius:7px;padding:8px 12px;font-size:13px;color:var(--t);background:var(--w);outline:none;min-width:160px;}
+select:focus,input[type=text]:focus{border-color:var(--v);}
+.btn{border:none;border-radius:7px;padding:9px 16px;font-size:13px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;}
+.bv{background:var(--v);color:#fff;}.bv:hover{background:var(--vc);}
+.bo{background:transparent;border:2px solid var(--v);color:var(--v);}.bo:hover{background:var(--v);color:#fff;}
+.bg2{background:#2E7D32;color:#fff;}.bp{background:#C0392B;color:#fff;}
+.tgw{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--cr);border-radius:7px;border:2px solid var(--b);margin-top:12px;flex-wrap:wrap;}
+.tg{position:relative;width:42px;height:22px;cursor:pointer;}
+.tg input{opacity:0;width:0;height:0;position:absolute;}
+.sl{position:absolute;inset:0;background:#ccc;border-radius:22px;transition:.3s;}
+.sl:before{content:'';position:absolute;height:16px;width:16px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.3s;}
+.tg input:checked+.sl{background:var(--v);}
+.tg input:checked+.sl:before{transform:translateX(20px);}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+.st{background:var(--w);border-radius:8px;padding:12px 16px;display:flex;flex-direction:column;gap:2px;min-width:100px;box-shadow:0 1px 6px rgba(0,0,0,.07);}
+.st .n{font-size:22px;font-weight:800;color:var(--v);line-height:1;}
+.st .d{font-size:10px;color:var(--tl);font-weight:600;text-transform:uppercase;}
+.tw{background:var(--w);border-radius:10px;overflow:hidden;box-shadow:0 1px 8px rgba(0,0,0,.08);}
+table{width:100%;border-collapse:collapse;}
+thead tr{background:var(--ve);color:#fff;}
+thead th{padding:10px 12px;text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;white-space:nowrap;}
+tbody tr{border-bottom:1px solid #F0EAE5;}
+tbody tr:hover{background:#FDF8F5;}
+tbody td{padding:10px 12px;font-size:12px;vertical-align:middle;}
+tbody td:first-child{font-weight:600;color:var(--ve);max-width:240px;word-break:break-word;}
+.rb{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700;}
+.rs{background:#E8F5E9;color:#2E7D32;}.rp{background:#FFF3E0;color:#BF6000;}
+.rr{background:#E3F2FD;color:#1565C0;}.rru{background:#F3E5F5;color:#6A1B9A;}.ro{background:#EEE;color:#555;}
+.sb2{display:inline-block;padding:2px 8px;border-radius:5px;font-size:10px;font-weight:600;background:#F3ECE8;color:var(--v);}
+.vz{padding:40px;text-align:center;color:#C0AEA8;}
+.st-ativo{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700;background:#E8F5E9;color:#2E7D32;}
+.st-inativo{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700;background:#FFEBEE;color:#C62828;}
+.fg2{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin-bottom:18px;}
+.g2{display:flex;flex-direction:column;gap:5px;}
+.g2 label{font-size:11px;font-weight:700;color:var(--v);text-transform:uppercase;}
+.g2 input,.g2 select,.g2 textarea{border:2px solid var(--b);border-radius:7px;padding:9px 12px;font-size:13px;color:var(--t);background:var(--w);outline:none;font-family:inherit;}
+.g2 input:focus,.g2 select:focus,.g2 textarea:focus{border-color:var(--v);}
+.g2 textarea{resize:vertical;min-height:70px;}
+.gfull{grid-column:1/-1;}
+.al{padding:10px 14px;border-radius:7px;font-size:13px;font-weight:600;margin-bottom:14px;display:none;}
+.aok{background:#E8F5E9;color:#2E7D32;border:1px solid #A5D6A7;}
+.aer{background:#FFEBEE;color:#C62828;border:1px solid #FFCDD2;}
+.lh{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px;}
+.cc{background:var(--w);border-radius:10px;padding:16px;margin-bottom:10px;display:flex;align-items:flex-start;gap:12px;box-shadow:0 1px 6px rgba(0,0,0,.07);}
+.ci{width:38px;height:38px;border-radius:8px;flex-shrink:0;background:var(--v);color:var(--gc);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;}
+.cn{flex:1;min-width:0;}
+.cr3{font-size:14px;font-weight:700;color:var(--ve);margin-bottom:3px;}
+.cm{display:flex;flex-wrap:wrap;gap:6px;font-size:11px;color:var(--tl);}
+.cu{font-size:10px;color:var(--tl);margin-top:4px;}
+.modal-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:200;align-items:center;justify-content:center;}
+.modal-ov.on{display:flex;}
+.modal{background:#fff;border-radius:12px;padding:24px;width:92%;max-width:580px;max-height:90vh;overflow-y:auto;box-shadow:0 8px 40px rgba(0,0,0,.2);}
+.modal h3{font-size:16px;font-weight:700;color:var(--ve);margin-bottom:4px;}
+.modal p{font-size:12px;color:var(--tl);margin-bottom:18px;}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div class="logo">G</div>
+  <div><div class="ht">GerencialPR</div><div class="hs">Gestao de Clientes</div></div>
+  <div class="sc"><div class="dot" id="idDot"></div><span id="idStxt">Conectando...</span></div>
+</div>
+<div class="tabs">
+  <div class="tab on" id="tabF">Filtrar</div>
+  <div class="tab" id="tabC">Cadastrar</div>
+  <div class="tab" id="tabE">Equipe <span id="idBcnt" style="background:var(--g);color:#fff;border-radius:20px;padding:1px 6px;font-size:10px;margin-left:3px;display:none"></span></div>
+</div>
+
+<div class="pnl on" id="pnlF">
+  <div class="card">
+    <div class="row">
+      <div class="fg"><label>Regime</label>
+        <select id="selR"><option value="">Todos</option><option value="Simples Nacional">Simples Nacional</option><option value="Lucro Presumido">Lucro Presumido</option><option value="Lucro Real">Lucro Real</option><option value="Rural">Rural</option><option value="CPF">CPF</option><option value="MEI">MEI</option></select>
+      </div>
+      <div class="fg"><label>Escritorio</label>
+        <select id="selE"><option value="">Todos</option><option value="DV">DV</option><option value="CRUZEIRO">Cruzeiro</option></select>
+      </div>
+      <div class="fg"><label>Status</label>
+        <select id="selSt"><option value="Ativo">Ativos</option><option value="">Todos</option><option value="Inativo">Inativos</option></select>
+      </div>
+      <div class="fg"><label>Mes de Entrada</label>
+        <select id="selMes">
+          <option value="">Todos</option>
+          <option value="01">Janeiro</option><option value="02">Fevereiro</option><option value="03">Marco</option>
+          <option value="04">Abril</option><option value="05">Maio</option><option value="06">Junho</option>
+          <option value="07">Julho</option><option value="08">Agosto</option><option value="09">Setembro</option>
+          <option value="10">Outubro</option><option value="11">Novembro</option><option value="12">Dezembro</option>
+        </select>
+      </div>
+      <div class="fg"><label>Ano de Entrada</label>
+        <input type="text" id="inpAno" placeholder="Ex: 2025" style="width:90px" maxlength="4">
+      </div>
+      <div class="fg"><label>Segmento</label>
+        <select id="selS"><option value="">Todos</option><option value="Advocacia">Advocacia</option>
+<option value="Agente">Agente</option>
+<option value="Agronegócio">Agronegócio</option>
+<option value="Aluguel / Imóveis">Aluguel / Imóveis</option>
+<option value="Associações">Associações</option>
+<option value="Comércio">Comércio</option>
+<option value="Condicionamento Físico">Condicionamento Físico</option>
+<option value="Confecções">Confecções</option>
+<option value="Consultoria">Consultoria</option>
+<option value="Cooperativas">Cooperativas</option>
+<option value="Corretora de Seguros">Corretora de Seguros</option>
+<option value="Desenvolvimento / TI">Desenvolvimento / TI</option>
+<option value="Educação">Educação</option>
+<option value="Empreendimentos">Empreendimentos</option>
+<option value="Energia Solar">Energia Solar</option>
+<option value="Entretenimento">Entretenimento</option>
+<option value="Fisioterapia / Psicologia">Fisioterapia / Psicologia</option>
+<option value="Fornecedor">Fornecedor</option>
+<option value="Gestão">Gestão</option>
+<option value="Holding / Patrimônio">Holding / Patrimônio</option>
+<option value="Hotel">Hotel</option>
+<option value="Indústria / Fabricação">Indústria / Fabricação</option>
+<option value="Instalações">Instalações</option>
+<option value="Lanchonete / Bar">Lanchonete / Bar</option>
+<option value="Loteamento">Loteamento</option>
+<option value="Manutenção">Manutenção</option>
+<option value="Marketing / Publicidade">Marketing / Publicidade</option>
+<option value="Medicina">Medicina</option>
+<option value="Obras / Construção">Obras / Construção</option>
+<option value="Odontologia">Odontologia</option>
+<option value="Padaria">Padaria</option>
+<option value="Perícias">Perícias</option>
+<option value="Representações">Representações</option>
+<option value="Restaurante">Restaurante</option>
+<option value="Saúde / Terapias">Saúde / Terapias</option>
+<option value="Serviços">Serviços</option>
+<option value="Transportes">Transportes</option>
+<option value="Treinamentos">Treinamentos</option></select>
+      </div>
+      <div class="fg fw"><label>Buscar empresa / responsavel</label>
+        <input type="text" id="inpB" placeholder="Digite e clique Buscar...">
+      </div>
+      <button class="btn bv" id="btnBuscar">Buscar</button>
+    </div>
+    <div class="tgw">
+      <span style="font-size:12px;font-weight:700;color:var(--v);text-transform:uppercase">Agrupar por telefone</span>
+      <label class="tg"><input type="checkbox" id="togG"><span class="sl"></span></label>
+      <span id="idLG" style="font-size:12px;color:var(--tl)">Desativado</span>
+      <button class="btn bg2" id="btnCSV" style="margin-left:auto">Baixar CSV Disparo</button>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="st"><span class="n" id="idNf">...</span><span class="d">Filtrados</span></div>
+    <div class="st"><span class="n" id="idNg">-</span><span class="d">Agrupados</span></div>
+    <div class="st"><span class="n" id="idTotal">977</span><span class="d">Total base</span></div>
+    <div class="st"><span class="n">714</span><span class="d">Simples</span></div>
+    <div class="st"><span class="n">157</span><span class="d">Presumido</span></div>
+    <div class="st"><span class="n">74</span><span class="d">Lucro Real</span></div>
+  </div>
+  <div class="tw">
+    <table><thead><tr><th>Empresa</th><th>Responsavel</th><th>Regime</th><th>Segmento</th><th>Telefone</th><th>Escritorio</th><th>Status</th><th>Acoes</th></tr></thead>
+    <tbody id="idTb"><tr><td colspan="7" style="text-align:center;padding:20px;color:var(--tl)">Carregando...</td></tr></tbody></table>
+    <div class="vz" id="idVz" style="display:none"><p>Nenhum resultado.</p></div>
+  </div>
+</div>
+
+<div class="pnl" id="pnlC">
+  <div class="card">
+    <div style="font-size:17px;font-weight:700;color:var(--ve);margin-bottom:5px">Cadastrar Novo Cliente</div>
+    <div style="font-size:13px;color:var(--tl);margin-bottom:20px">Salvo em nuvem para toda a equipe.</div>
+    <div class="al aok" id="idAok"></div><div class="al aer" id="idAer"></div>
+    <div class="fg2">
+      <div class="g2 gfull"><label>Razao Social *</label><input type="text" id="fEmp" placeholder="Ex: JOAO SILVA LTDA"></div>
+      <div class="g2"><label>Responsavel</label><input type="text" id="fResp" placeholder="Nome do responsavel"></div>
+      <div class="g2"><label>Telefone</label><input type="text" id="fTel" placeholder="46 99999-0000"></div>
+      <div class="g2"><label>Regime</label>
+        <select id="fReg"><option value="">Selecione...</option><option value="Simples Nacional">Simples Nacional</option><option value="Lucro Presumido">Lucro Presumido</option><option value="Lucro Real">Lucro Real</option><option value="Rural">Rural</option><option value="CPF">CPF</option><option value="MEI">MEI</option></select>
+      </div>
+      <div class="g2"><label>Segmento</label><select id="fSeg"><option value="">Selecione...</option><option value="Advocacia">Advocacia</option>
+<option value="Agente">Agente</option>
+<option value="Agronegócio">Agronegócio</option>
+<option value="Aluguel / Imóveis">Aluguel / Imóveis</option>
+<option value="Associações">Associações</option>
+<option value="Comércio">Comércio</option>
+<option value="Condicionamento Físico">Condicionamento Físico</option>
+<option value="Confecções">Confecções</option>
+<option value="Consultoria">Consultoria</option>
+<option value="Cooperativas">Cooperativas</option>
+<option value="Corretora de Seguros">Corretora de Seguros</option>
+<option value="Desenvolvimento / TI">Desenvolvimento / TI</option>
+<option value="Educação">Educação</option>
+<option value="Empreendimentos">Empreendimentos</option>
+<option value="Energia Solar">Energia Solar</option>
+<option value="Entretenimento">Entretenimento</option>
+<option value="Fisioterapia / Psicologia">Fisioterapia / Psicologia</option>
+<option value="Fornecedor">Fornecedor</option>
+<option value="Gestão">Gestão</option>
+<option value="Holding / Patrimônio">Holding / Patrimônio</option>
+<option value="Hotel">Hotel</option>
+<option value="Indústria / Fabricação">Indústria / Fabricação</option>
+<option value="Instalações">Instalações</option>
+<option value="Lanchonete / Bar">Lanchonete / Bar</option>
+<option value="Loteamento">Loteamento</option>
+<option value="Manutenção">Manutenção</option>
+<option value="Marketing / Publicidade">Marketing / Publicidade</option>
+<option value="Medicina">Medicina</option>
+<option value="Obras / Construção">Obras / Construção</option>
+<option value="Odontologia">Odontologia</option>
+<option value="Padaria">Padaria</option>
+<option value="Perícias">Perícias</option>
+<option value="Representações">Representações</option>
+<option value="Restaurante">Restaurante</option>
+<option value="Saúde / Terapias">Saúde / Terapias</option>
+<option value="Serviços">Serviços</option>
+<option value="Transportes">Transportes</option>
+<option value="Treinamentos">Treinamentos</option><option value="Outro">Outro</option></select></div>
+      <div class="g2"><label>Escritorio</label><select id="fEsc"><option value="">Selecione...</option><option value="DV">DV</option><option value="CRUZEIRO">CRUZEIRO</option><option value="Outro">Outro</option></select></div>
+      <div class="g2"><label>Data de Entrada</label><input type="date" id="fData"></div>
+      <div class="g2 gfull"><label>Observacoes</label><textarea id="fObs" placeholder="CNAE, grupo..."></textarea></div>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center">
+      <button class="btn bv" id="btnSalvar">Salvar</button>
+      <button class="btn bo" id="btnLimpar">Limpar</button>
+      <span id="idSv" style="display:none;font-size:12px;color:var(--tl)">Salvando...</span>
+    </div>
+  </div>
+</div>
+
+<div class="pnl" id="pnlE">
+  <div class="lh">
+    <div><div style="font-size:15px;font-weight:700;color:var(--ve)">Clientes Cadastrados</div>
+    <div style="font-size:11px;color:var(--tl)" id="idLsub">Carregando...</div></div>
+    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+      <input type="text" id="inpCad" placeholder="Buscar..." style="min-width:180px">
+      <button class="btn bv" id="btnEC">Exportar CSV</button>
+      <button class="btn bo" id="btnAtu">Atualizar</button>
+    </div>
+  </div>
+  <div id="idListaCads"></div>
+</div>
+
+<div class="modal-ov" id="modalOv">
+  <div class="modal">
+    <h3>Editar Cliente</h3>
+    <p>Atualize os dados e clique em Salvar.</p>
+    <div class="al aok" id="mAok"></div><div class="al aer" id="mAer"></div>
+    <input type="hidden" id="mId">
+    <div class="fg2">
+      <div class="g2 gfull"><label>Razao Social</label><input type="text" id="mEmp"></div>
+      <div class="g2"><label>Responsavel</label><input type="text" id="mResp"></div>
+      <div class="g2"><label>Telefone</label><input type="text" id="mTel"></div>
+      <div class="g2"><label>Regime</label>
+        <select id="mReg"><option value="">Selecione...</option><option value="Simples Nacional">Simples Nacional</option><option value="Lucro Presumido">Lucro Presumido</option><option value="Lucro Real">Lucro Real</option><option value="Rural">Rural</option><option value="CPF">CPF</option><option value="MEI">MEI</option></select>
+      </div>
+      <div class="g2"><label>Segmento</label><select id="mSeg"><option value="">Selecione...</option><option value="Advocacia">Advocacia</option>
+<option value="Agente">Agente</option>
+<option value="Agronegócio">Agronegócio</option>
+<option value="Aluguel / Imóveis">Aluguel / Imóveis</option>
+<option value="Associações">Associações</option>
+<option value="Comércio">Comércio</option>
+<option value="Condicionamento Físico">Condicionamento Físico</option>
+<option value="Confecções">Confecções</option>
+<option value="Consultoria">Consultoria</option>
+<option value="Cooperativas">Cooperativas</option>
+<option value="Corretora de Seguros">Corretora de Seguros</option>
+<option value="Desenvolvimento / TI">Desenvolvimento / TI</option>
+<option value="Educação">Educação</option>
+<option value="Empreendimentos">Empreendimentos</option>
+<option value="Energia Solar">Energia Solar</option>
+<option value="Entretenimento">Entretenimento</option>
+<option value="Fisioterapia / Psicologia">Fisioterapia / Psicologia</option>
+<option value="Fornecedor">Fornecedor</option>
+<option value="Gestão">Gestão</option>
+<option value="Holding / Patrimônio">Holding / Patrimônio</option>
+<option value="Hotel">Hotel</option>
+<option value="Indústria / Fabricação">Indústria / Fabricação</option>
+<option value="Instalações">Instalações</option>
+<option value="Lanchonete / Bar">Lanchonete / Bar</option>
+<option value="Loteamento">Loteamento</option>
+<option value="Manutenção">Manutenção</option>
+<option value="Marketing / Publicidade">Marketing / Publicidade</option>
+<option value="Medicina">Medicina</option>
+<option value="Obras / Construção">Obras / Construção</option>
+<option value="Odontologia">Odontologia</option>
+<option value="Padaria">Padaria</option>
+<option value="Perícias">Perícias</option>
+<option value="Representações">Representações</option>
+<option value="Restaurante">Restaurante</option>
+<option value="Saúde / Terapias">Saúde / Terapias</option>
+<option value="Serviços">Serviços</option>
+<option value="Transportes">Transportes</option>
+<option value="Treinamentos">Treinamentos</option><option value="Outro">Outro</option></select></div>
+      <div class="g2"><label>Escritorio</label><select id="mEsc"><option value="">Selecione...</option><option value="DV">DV</option><option value="CRUZEIRO">CRUZEIRO</option><option value="Outro">Outro</option></select></div>
+      <div class="g2"><label>Status</label>
+        <select id="mSt"><option value="Ativo">Ativo</option><option value="Inativo">Inativo</option></select>
+      </div>
+      <div class="g2"><label>Data de Entrada</label><input type="date" id="mData"></div>
+      <div class="g2 gfull"><label>Observacoes</label><textarea id="mObs" style="border:2px solid var(--b);border-radius:7px;padding:9px 12px;font-size:13px;width:100%;font-family:inherit;resize:vertical;min-height:70px"></textarea></div>
+    </div>
+    <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap">
+      <button class="btn bv" id="btnMSalvar">Salvar alteracoes</button>
+      <button class="btn bo" onclick="fecharModal()">Cancelar</button>
+      <span id="mSv" style="display:none;font-size:12px;color:var(--tl)">Salvando...</span>
+    </div>
+  </div>
+</div>
+
+<script>
+// Supabase REST API sem biblioteca externa
+var SB_URL = 'https://wqilvjeavvavnrbqmvnq.supabase.co';
+var SB_KEY = 'sb_publishable_hGpSCXHC623LL5AxJXqQoQ_O3GG9dDr';
+
+function sbHeaders() {
+  return {
+    'apikey': SB_KEY,
+    'Authorization': 'Bearer ' + SB_KEY,
+    'Content-Type': 'application/json',
+    'Prefer': 'return=representation'
+  };
+}
+
+async function sbSelect(table, query) {
+  var url = SB_URL + '/rest/v1/' + table + '?' + (query||'order=empresa');
+  var r = await fetch(url, { headers: sbHeaders() });
+  if (!r.ok) throw new Error('Erro ' + r.status);
+  return await r.json();
+}
+
+async function sbInsert(table, data) {
+  var r = await fetch(SB_URL + '/rest/v1/' + table, {
+    method: 'POST',
+    headers: sbHeaders(),
+    body: JSON.stringify(data)
+  });
+  if (!r.ok) { var e = await r.json(); throw new Error(e.message||'Erro ao inserir'); }
+  return await r.json();
+}
+
+async function sbUpdate(table, id, data) {
+  var r = await fetch(SB_URL + '/rest/v1/' + table + '?id=eq.' + id, {
+    method: 'PATCH',
+    headers: sbHeaders(),
+    body: JSON.stringify(data)
+  });
+  if (!r.ok) { var e = await r.json(); throw new Error(e.message||'Erro ao atualizar'); }
+  return true;
+}
+
+async function sbDelete(table, id) {
+  var r = await fetch(SB_URL + '/rest/v1/' + table + '?id=eq.' + id, {
+    method: 'DELETE',
+    headers: sbHeaders()
+  });
+  if (!r.ok) throw new Error('Erro ao deletar');
+  return true;
+}
+
+var BASE = [];
+var RES = [];
+var CADS = [];
+
+function xe(s){var d=document.createElement('div');d.textContent=String(s||'');return d.innerHTML;}
+function rb(r){if(!r)return'-';var c=r==='Simples Nacional'?'rs':r==='Lucro Presumido'?'rp':r==='Lucro Real'?'rr':r==='Rural'?'rru':r==='MEI'?'rs':'ro';return'<span class="rb '+c+'">'+xe(r)+'</span>';}
+function sbadge(s){return s?'<span class="sb2">'+xe(s)+'</span>':'-';}
+function nt(t){return(t||'').replace(/[^0-9]/g,'');}
+function qv(v){return'"'+(v||'').replace(/"/g,'""')+'"';}
+function baixar(txt,nome){var b=new Blob([txt],{type:'text/csv;charset=utf-8;'});var u=URL.createObjectURL(b);var a=document.createElement('a');a.href=u;a.download=nome;a.click();URL.revokeObjectURL(u);}
+function alrt(tp,m){var el=document.getElementById(tp==='ok'?'idAok':'idAer');el.textContent=m;el.style.display='block';setTimeout(function(){el.style.display='none';},4000);}
+function malrt(tp,m){var el=document.getElementById(tp==='ok'?'mAok':'mAer');el.textContent=m;el.style.display='block';setTimeout(function(){el.style.display='none';},4000);}
+
+async function init(){
+  try {
+    BASE = await sbSelect('empresas_base','order=empresa');
+    document.getElementById('idDot').className='dot ok';
+    document.getElementById('idStxt').textContent='Conectado ('+BASE.length+')';
+    document.getElementById('idTotal').textContent=BASE.length;
+    buscar();
+  } catch(e){
+    document.getElementById('idDot').className='dot off';
+    document.getElementById('idStxt').textContent='Erro: '+e.message;
+    document.getElementById('idTb').innerHTML='<tr><td colspan="7" style="text-align:center;padding:20px;color:red">Erro ao carregar. Recarregue.</td></tr>';
+  }
+}
+
+function buscar(){
+  if(BASE.length===0){alert('Aguarde o carregamento dos dados.');return;}
+  var r=document.getElementById('selR').value;
+  var e=document.getElementById('selE').value;
+  var s=document.getElementById('selS').value;
+  var txt=document.getElementById('inpB').value.toLowerCase().trim();
+  var grp=document.getElementById('togG').checked;
+  var f=[];
+  for(var i=0;i<BASE.length;i++){
+    var d=BASE[i];
+    if(r&&d.regime!==r)continue;
+    if(e&&(d.escritorio||'').toUpperCase()!==e)continue;
+    if(s&&(d.segmento||'')!==s)continue;
+    if(txt&&(d.empresa+' '+d.responsavel).toLowerCase().indexOf(txt)===-1)continue;
+    var st=document.getElementById('selSt').value;
+    if(st&&(d.status||'Ativo')!==st)continue;
+    var mes=document.getElementById('selMes').value;
+    var ano=document.getElementById('inpAno').value.trim();
+    if(mes||ano){
+      if(!d.data_entrada)continue;
+      var partes=d.data_entrada.split('-');
+      var anoD=partes[0],mesD=partes[1];
+      if(mes&&mesD!==mes)continue;
+      if(ano&&anoD!==ano)continue;
+    }
+    f.push(d);
+  }
+  var el=document.getElementById('idNf');
+  el.textContent=f.length;
+  el.style.color=f.length<BASE.length?'#C0392B':'var(--v)';
+  if(grp){RES=agrupar(f);document.getElementById('idNg').textContent=RES.length;document.getElementById('idLG').textContent='Ativado-'+RES.length;}
+  else{RES=f;document.getElementById('idNg').textContent='-';document.getElementById('idLG').textContent='Desativado';}
+  pintar(grp);
+}
+
+function pintar(grp){
+  var tb=document.getElementById('idTb'),vz=document.getElementById('idVz');
+  if(!RES.length){tb.innerHTML='';vz.style.display='';return;}
+  vz.style.display='none';
+  var h='',lim=Math.min(RES.length,300);
+  for(var i=0;i<lim;i++){
+    var d=RES[i];h+='<tr>';
+    if(grp&&d.count>1){
+      h+='<td><small>'+d.empresas.map(function(x){return xe(x);}).join('<br>')+'</small></td><td>'+xe(d.responsavel||'-')+'</td>';
+    }else{
+      h+='<td>'+xe(d.empresa||'-')+'</td><td>'+xe(d.responsavel||'-')+'</td>';
+    }
+    h+='<td>'+rb(d.regime)+'</td><td>'+sbadge(d.segmento)+'</td><td>'+xe(d.telefone||'-')+'</td><td>'+xe(d.escritorio||'-')+'</td>';
+    var stCls=(d.status==='Inativo')?'st-inativo':'st-ativo';
+    h+='<td><span class="'+stCls+'">'+(d.status||'Ativo')+'</span></td>';
+    if(!grp||d.count===1){h+='<td><button class="btn bv" style="padding:5px 10px;font-size:11px" data-row="'+i+'">Editar</button></td>';}
+    else{h+='<td>-</td>';}
+    h+='</tr>';
+  }
+  if(RES.length>300)h+='<tr><td colspan="7" style="text-align:center;padding:10px;color:var(--tl);font-size:11px">'+RES.length+' resultados - use CSV para ver todos</td></tr>';
+  tb.innerHTML=h;
+  tb.querySelectorAll('[data-row]').forEach(function(btn){
+    btn.addEventListener('click',function(){var idx=parseInt(this.getAttribute('data-row'));pedirSenha(function(){abrirModal(RES[idx]);});});
+  });
+}
+
+function agrupar(arr){
+  var g={},sem=[];
+  for(var i=0;i<arr.length;i++){var d=arr[i],t=nt(d.telefone||'');if(t.length>=8){if(!g[t])g[t]=[];g[t].push(d);}else sem.push(d);}
+  var res=[];
+  for(var t in g){var it=g[t],p=it[0],em={},sg={},rg={};for(var j=0;j<it.length;j++){if(it[j].empresa)em[it[j].empresa]=1;if(it[j].segmento)sg[it[j].segmento]=1;if(it[j].regime)rg[it[j].regime]=1;}var rk=Object.keys(rg);res.push({responsavel:p.responsavel||'',telefone:p.telefone||'',empresas:Object.keys(em),empresa:Object.keys(em)[0]||'',segmento:Object.keys(sg).join(', '),regime:rk.length===1?rk[0]:'Multi',escritorio:p.escritorio||'',count:it.length});}
+  for(var k=0;k<sem.length;k++){var d2=sem[k];res.push({responsavel:d2.responsavel||'',telefone:d2.telefone||'',empresas:[d2.empresa||''],empresa:d2.empresa||'',segmento:d2.segmento||'',regime:d2.regime||'',escritorio:d2.escritorio||'',count:1});}
+  return res;
+}
+
+function exportar(){
+  if(!RES.length){alert('Clique Buscar primeiro.');return;}
+  var grp=document.getElementById('togG').checked,bom='\uFEFF',sep=';',nl='\n';
+  var txt='';
+  if(grp){txt='Responsavel'+sep+'Telefone'+sep+'Empresas'+sep+'Regime'+sep+'Segmento'+sep+'Escritorio'+nl;for(var i=0;i<RES.length;i++){var d=RES[i];txt+=qv(d.responsavel)+sep+qv(d.telefone)+sep+qv(d.empresas.join(' | '))+sep+qv(d.regime)+sep+qv(d.segmento)+sep+qv(d.escritorio)+nl;}}
+  else{txt='Empresa'+sep+'Responsavel'+sep+'Regime'+sep+'Segmento'+sep+'Telefone'+sep+'Escritorio'+nl;for(var i=0;i<RES.length;i++){var d=RES[i];txt+=qv(d.empresa)+sep+qv(d.responsavel)+sep+qv(d.regime)+sep+qv(d.segmento)+sep+qv(d.telefone)+sep+qv(d.escritorio)+nl;}}
+  baixar(bom+txt,grp?'disparo.csv':'clientes.csv');
+}
+
+async function salvar(){
+  var emp=document.getElementById('fEmp').value.trim();
+  if(!emp){alrt('er','Razao Social obrigatoria.');return;}
+  var btn=document.getElementById('btnSalvar'),sv=document.getElementById('idSv');
+  btn.disabled=true;sv.style.display='inline';
+  try{
+    var n={empresa:emp,responsavel:document.getElementById('fResp').value.trim(),telefone:document.getElementById('fTel').value.trim(),regime:document.getElementById('fReg').value,segmento:document.getElementById('fSeg').value,escritorio:document.getElementById('fEsc').value,data_entrada:document.getElementById('fData').value||null,observacoes:document.getElementById('fObs').value.trim()};
+    await sbInsert('empresas_base',n);
+    alrt('ok','Cliente cadastrado!');
+    limpar();
+    BASE=await sbSelect('empresas_base','order=empresa');
+    document.getElementById('idTotal').textContent=BASE.length;
+  }catch(ex){alrt('er',ex.message||'Erro.');}
+  finally{btn.disabled=false;sv.style.display='none';}
+}
+
+function limpar(){['fEmp','fResp','fTel','fObs','fData'].forEach(function(id){document.getElementById(id).value='';});['fReg','fSeg','fEsc'].forEach(function(id){document.getElementById(id).value='';}); }
+
+async function lcads(){
+  try{
+    CADS=await sbSelect('empresas_base','order=empresa');
+    var b=document.getElementById('idBcnt');b.textContent=CADS.length;b.style.display=CADS.length?'':'none';
+    document.getElementById('idLsub').textContent=CADS.length+' cliente(s) no banco';
+    fcads();
+  }catch(ex){document.getElementById('idListaCads').innerHTML='<div class="vz"><p>Erro ao carregar.</p></div>';}
+}
+
+function fcads(){
+  var txt=(document.getElementById('inpCad').value||'').toLowerCase().trim();
+  var lista=txt?CADS.filter(function(c){return(c.empresa+' '+c.responsavel).toLowerCase().indexOf(txt)!==-1;}):CADS;
+  rcads(lista);
+}
+
+function rcads(lista){
+  var ct=document.getElementById('idListaCads');
+  if(!lista.length){ct.innerHTML='<div class="vz"><p>Nenhum.</p></div>';return;}
+  var h='';
+  for(var i=0;i<Math.min(lista.length,200);i++){
+    var c=lista[i];
+    h+='<div class="cc"><div class="ci">'+xe((c.empresa||'?').charAt(0))+'</div><div class="cn"><div class="cr3">'+xe(c.empresa)+'</div><div class="cm">';
+    if(c.responsavel)h+='<span>'+xe(c.responsavel)+'</span>';
+    if(c.telefone)h+='<span>'+xe(c.telefone)+'</span>';
+    if(c.regime)h+='<span>'+rb(c.regime)+'</span>';
+    var stCls2=(c.status==='Inativo')?'st-inativo':'st-ativo';
+    h+='<span><span class="'+stCls2+'">'+(c.status||'Ativo')+'</span></span>';
+    if(c.segmento)h+='<span>'+sbadge(c.segmento)+'</span>';
+    if(c.escritorio)h+='<span>'+xe(c.escritorio)+'</span>';
+    h+='</div>';
+    if(c.observacoes)h+='<div style="margin-top:4px;font-size:11px;color:var(--tl);font-style:italic">'+xe(c.observacoes)+'</div>';
+    h+='</div><div style="flex-shrink:0;display:flex;flex-direction:column;gap:5px">';
+    h+='<button class="btn bv" style="padding:5px 10px;font-size:11px" data-edit="'+c.id+'">Editar</button>';
+    h+='<button class="btn bp" style="padding:5px 10px;font-size:11px" data-del="'+c.id+'">Remover</button>';
+    h+='</div></div>';
+  }
+  if(lista.length>200)h+='<div class="vz"><p>Mostrando 200 de '+lista.length+'. Use a busca para filtrar.</p></div>';
+  ct.innerHTML=h;
+  ct.querySelectorAll('[data-edit]').forEach(function(btn){btn.addEventListener('click',function(){var id=this.getAttribute('data-edit');var c=CADS.find(function(x){return x.id===id;});if(c)pedirSenha(function(){abrirModal(c);});});});
+  ct.querySelectorAll('[data-del]').forEach(function(btn){btn.addEventListener('click',function(){var id=this.getAttribute('data-del');pedirSenha(function(){if(!confirm('Remover?'))return;sbDelete('empresas_base',id).then(function(){BASE=BASE.filter(function(x){return x.id!==id;});lcads();}).catch(function(e){alert('Erro: '+e.message);});});});});
+}
+
+function ecads(){
+  if(!CADS.length){alert('Nenhum.');return;}
+  var bom='\uFEFF',sep=';',nl='\n';
+  var txt='Empresa'+sep+'Responsavel'+sep+'Telefone'+sep+'Regime'+sep+'Segmento'+sep+'Escritorio'+sep+'Observacoes'+nl;
+  for(var i=0;i<CADS.length;i++){var c=CADS[i];txt+=qv(c.empresa)+sep+qv(c.responsavel)+sep+qv(c.telefone)+sep+qv(c.regime)+sep+qv(c.segmento)+sep+qv(c.escritorio)+sep+qv(c.observacoes)+nl;}
+  baixar(bom+txt,'clientes_gerencial.csv');
+}
+
+function abrirModal(c){
+  document.getElementById('mId').value=c.id||'';
+  document.getElementById('mEmp').value=c.empresa||'';
+  document.getElementById('mResp').value=c.responsavel||'';
+  document.getElementById('mTel').value=c.telefone||'';
+  document.getElementById('mReg').value=c.regime||'';
+  document.getElementById('mSeg').value=c.segmento||'';
+  document.getElementById('mEsc').value=c.escritorio||'';
+  document.getElementById('mSt').value=c.status||'Ativo';
+  document.getElementById('mData').value=c.data_entrada||'';
+  document.getElementById('mObs').value=c.observacoes||'';
+  document.getElementById('modalOv').classList.add('on');
+}
+function fecharModal(){document.getElementById('modalOv').classList.remove('on');}
+
+async function salvarEdicao(){
+  var id=document.getElementById('mId').value;
+  var btn=document.getElementById('btnMSalvar'),sv=document.getElementById('mSv');
+  btn.disabled=true;sv.style.display='inline';
+  try{
+    var n={empresa:document.getElementById('mEmp').value.trim(),responsavel:document.getElementById('mResp').value.trim(),telefone:document.getElementById('mTel').value.trim(),regime:document.getElementById('mReg').value,segmento:document.getElementById('mSeg').value,escritorio:document.getElementById('mEsc').value,status:document.getElementById('mSt').value,data_entrada:document.getElementById('mData').value||null,observacoes:document.getElementById('mObs').value.trim()};
+    await sbUpdate('empresas_base',id,n);
+    malrt('ok','Atualizado!');
+    for(var i=0;i<BASE.length;i++){if(BASE[i].id===id){Object.assign(BASE[i],n);break;}}
+    setTimeout(function(){fecharModal();lcads();},1200);
+  }catch(ex){malrt('er',ex.message||'Erro.');}
+  finally{btn.disabled=false;sv.style.display='none';}
+}
+
+function aba(id){
+  document.querySelectorAll('.pnl').forEach(function(p){p.classList.remove('on');});
+  document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('on');});
+  document.getElementById('pnl'+id).classList.add('on');
+  document.getElementById('tab'+id).classList.add('on');
+  if(id==='E')lcads();
+}
+
+document.getElementById('btnBuscar').addEventListener('click',buscar);
+document.getElementById('btnCSV').addEventListener('click',exportar);
+document.getElementById('btnSalvar').addEventListener('click',salvar);
+document.getElementById('btnLimpar').addEventListener('click',limpar);
+document.getElementById('btnEC').addEventListener('click',ecads);
+document.getElementById('btnAtu').addEventListener('click',lcads);
+document.getElementById('btnMSalvar').addEventListener('click',salvarEdicao);
+document.getElementById('inpB').addEventListener('keydown',function(ev){if(ev.key==='Enter')buscar();});
+document.getElementById('inpCad').addEventListener('input',fcads);
+document.getElementById('tabF').addEventListener('click',function(){aba('F');});
+document.getElementById('tabC').addEventListener('click',function(){pedirSenha(function(){aba('C');});});
+document.getElementById('tabE').addEventListener('click',function(){aba('E');});
+document.getElementById('modalOv').addEventListener('click',function(e){if(e.target===this)fecharModal();});
+
+
+var SENHA_ADMIN = 'gerencial2026';
+var autenticado = false;
+var acaoAposLogin = null;
+
+function pedirSenha(callback){
+  if(autenticado){ callback(); return; }
+  acaoAposLogin = callback;
+  document.getElementById('pwdInp').value = '';
+  document.getElementById('pwdAer').style.display = 'none';
+  document.getElementById('pwdOv').classList.add('on');
+  setTimeout(function(){ document.getElementById('pwdInp').focus(); }, 100);
+}
+
+function confirmarSenha(){
+  var v = document.getElementById('pwdInp').value.trim();
+  if(v === SENHA_ADMIN){
+    autenticado = true;
+    document.getElementById('pwdOv').classList.remove('on');
+    if(acaoAposLogin) acaoAposLogin();
+    acaoAposLogin = null;
+  } else {
+    var el = document.getElementById('pwdAer');
+    el.textContent = 'Senha incorreta.';
+    el.style.display = 'block';
+  }
+}
+
+document.getElementById('btnVerSenha').addEventListener('click', function(){
+  var inp = document.getElementById('pwdInp');
+  if(inp.type === 'password'){ inp.type = 'text'; this.innerHTML = '&#128064;'; }
+  else { inp.type = 'password'; this.innerHTML = '&#128065;'; }
+});
+document.getElementById('btnPwdOk').addEventListener('click', confirmarSenha);
+document.getElementById('btnPwdCancel').addEventListener('click', function(){
+  document.getElementById('pwdOv').classList.remove('on');
+  acaoAposLogin = null;
+});
+document.getElementById('pwdInp').addEventListener('keydown', function(ev){ if(ev.key==='Enter') confirmarSenha(); });
+document.getElementById('pwdOv').addEventListener('click', function(e){ if(e.target===this){ this.classList.remove('on'); acaoAposLogin=null; } });
+
+init();
+</script>
+
+<div class="modal-ov" id="pwdOv">
+  <div class="modal" style="max-width:380px">
+    <h3>Acesso Restrito</h3>
+    <p>Digite a senha para cadastrar ou editar clientes.</p>
+    <div class="al aer" id="pwdAer"></div>
+    <div class="g2">
+      <div style="position:relative">
+        <input type="password" id="pwdInp" placeholder="Senha" style="border:2px solid var(--b);border-radius:7px;padding:9px 40px 9px 12px;font-size:13px;width:100%">
+        <button type="button" id="btnVerSenha" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:16px;color:var(--tl);padding:4px">👁</button>
+      </div>
+    </div>
+    <div style="display:flex;gap:10px;margin-top:16px">
+      <button class="btn bv" id="btnPwdOk">Confirmar</button>
+      <button class="btn bo" id="btnPwdCancel">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+</body></html>
